@@ -11,15 +11,17 @@ Bundle.destroy_all
 
 Person.create! ([{
   name: "John",
-  bundle_number: 3
+  bundle_number: 3,
 },
 {
   name: "Tom",
-  bundle_number: 1
+  bundle_number: 1,
+
 },
 {
   name: "Ann",
-  bundle_number: 2
+  bundle_number: 2,
+
 }])
 
 Theater.create! ([{

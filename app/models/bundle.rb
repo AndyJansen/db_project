@@ -1,6 +1,6 @@
 class Bundle < ApplicationRecord
-  belongs_to :person
-  belongs_to :theater
+  # belongs_to :person
+  # belongs_to :theater
   has_many :movies
 
   def find_people

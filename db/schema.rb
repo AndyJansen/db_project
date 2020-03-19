@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_180339) do
+ActiveRecord::Schema.define(version: 2020_03_19_182718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_03_19_180339) do
     t.integer "bundle_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "bundle_id"
   end
 
   create_table "theaters", force: :cascade do |t|
@@ -47,4 +48,5 @@ ActiveRecord::Schema.define(version: 2020_03_19_180339) do
 
   add_foreign_key "bundles", "people"
   add_foreign_key "bundles", "theaters"
+  add_foreign_key "people", "bundles"
 end
